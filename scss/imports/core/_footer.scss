@@ -1,0 +1,288 @@
+// css footer
+footer {
+  --heighFooter: 700px;
+  width: 100%;
+  height: var(--heighHeader);
+  top: 0;
+  left: 0;
+  // background: $yellow-cl;
+  padding-bottom: 170px;
+  padding-top: 60px;
+  position: relative;
+  .backtotop {
+    z-index: 2;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    // margin-bottom: 170px;
+    position: relative;
+    img {
+      width: 20px;
+      transform: rotate(-90deg);
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 10px;
+      font-family: "pb";
+      color: $black-cl;
+      text-transform: uppercase;
+    }
+  }
+  .row {
+    .col-md-6 {
+      z-index: 5;
+      p {
+        font-size: 10px;
+        font-family: "pb";
+        color: $black-cl;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        // line-height: 250%;
+        line-height: 32px;
+      }
+      &.contact {
+        .quts {
+          max-width: 240px;
+        }
+        .row {
+          .col-6 {
+            box-sizing: border-box;
+            // &:not(:first-child) {
+            //   margin-top: 30px;
+            // }
+            label {
+              font-size: 12px;
+              font-family: "pb";
+              color: $black-cl;
+              //   margin-top: 30px;
+            }
+            input {
+              width: 100%;
+              border: none;
+              background: transparent;
+              border-bottom: 1px solid #000;
+              display: block;
+              box-sizing: border-box;
+              resize: none;
+              outline: none;
+              font-size: 12px;
+              font-family: "pr";
+              transition: 0.2s ease;
+              margin-bottom: 20px;
+              padding: 4px;
+              :focus {
+                border-bottom: 2px solid #16a085;
+                color: #16a085;
+                transition: 0.2s ease;
+              }
+            }
+            .phone,
+            .mail,
+            .mes {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+      .tel,
+      .quts {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 515px;
+    background: $yellow-cl;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    width: $container-width;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  &.contacts {
+    .add {
+      p {
+        max-width: 250px;
+      }
+    }
+    background: #ffde00;
+    &::after {
+      content: none;
+    }
+    &::before {
+      content: none;
+    }
+    @include xs {
+      .container {
+        .row {
+          .col-md-6 {
+            &.info {
+              .add {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include sm {
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+  @include xs {
+    // padding-bottom: 130px;
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    &::after {
+      content: "";
+      width: 100vw;
+      height: 250px;
+      background: $yellow-cl;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    .row {
+      .col-md-6 {
+        &.contact {
+          display: none;
+        }
+        &.info {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // --heighFT: 700px;
+  // height: var(--heighFT);
+  // position: relative;
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 100%;
+  //   background: $yellow-cl;
+  //   bottom: 0;
+  //   height: 510px;
+  //   z-index: 0;
+  // }
+  // .container {
+  //   // border-top: 2px solid #000;
+
+  //   .row {
+  //     display: flex;
+  //     position: relative;
+  //     z-index: 1;
+  //     //   margin: 0 px;
+  //     .col-md-6 {
+  //       p {
+  //         font-size: 12px;
+  //         font-family: "pb";
+  //         color: $black-cl;
+  //         text-transform: uppercase;
+  //       }
+  //       &.info {
+  //         width: 240px;
+  //         line-height: 32px;
+  //         .tel {
+  //           line-height: 32px;
+  //           margin-bottom: 32px;
+  //         }
+  //       }
+  //       &.contact {
+  //         .quts {
+  //           width: 240px;
+  //           margin-bottom: 32px;
+  //           line-height: 32px;
+  //         }
+  //         .row {
+  //           .col-6 {
+  //             box-sizing: border-box;
+  //             // &:not(:first-child) {
+  //             //   margin-top: 30px;
+  //             // }
+  //             label {
+  //               font-size: 12px;
+  //               font-family: "pb";
+  //               color: $black-cl;
+  //               //   margin-top: 30px;
+  //             }
+  //             input {
+  //               width: 100%;
+  //               border: none;
+  //               background: transparent;
+  //               border-bottom: 1px solid #000;
+  //               display: block;
+  //               box-sizing: border-box;
+  //               resize: none;
+  //               outline: none;
+  //               font-size: 12px;
+  //               font-family: "pr";
+  //               transition: 0.2s ease;
+  //               margin-bottom: 20px;
+  //               padding: 4px;
+  //               :focus {
+  //                 border-bottom: 2px solid #16a085;
+  //                 color: #16a085;
+  //                 transition: 0.2s ease;
+  //               }
+  //             }
+  //             .phone,
+  //             .mail,
+  //             .mes {
+  //               margin-top: 30px;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .backtotop {
+  //     z-index: 1;
+  //     text-align: center;
+  //     align-items: center;
+  //     margin-top: 50px;
+  //     position: relative;
+  //     img {
+  //       width: 20px;
+  //       transform: rotate(-90deg);
+  //       margin-bottom: 20px;
+  //     }
+  //     p {
+  //       font-size: 10px;
+  //       font-family: "pb";
+  //       color: $black-cl;
+  //       text-transform: uppercase;
+  //     }
+  //   }
+  // }
+}

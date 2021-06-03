@@ -1,0 +1,107 @@
+.projectdetail {
+  padding: 60px 0;
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    // vertical-align: middle;
+    .title__name {
+      font-size: 14px;
+      font-family: "pr";
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      align-items: center;
+      //   line-height: 15px;
+    }
+    .title__right {
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 1;
+      font-size: 12px;
+      font-family: "pr";
+      .full {
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+        img {
+          width: 10px;
+          height: 10px;
+          margin-left: 20px;
+        }
+      }
+      .back {
+        display: flex;
+        align-items: center;
+        img {
+          width: 10px;
+          transform: rotate(90deg);
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  .image {
+    height: 0px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .description {
+    padding-top: 40px;
+    display: flex;
+    font-family: "pr";
+    .col-md-6 {
+      padding: 0;
+      .titledes {
+        margin-bottom: 25px;
+        font-size: 14px;
+        font-weight: 550;
+        text-transform: uppercase;
+      }
+      .des {
+        max-width: 315px;
+        font-size: 11px;
+        line-height: 20px;
+        span {
+          font-style: italic;
+        }
+      }
+      &:last-child {
+        display: flex;
+      }
+    }
+  }
+  @include xs {
+    padding-bottom: 20px;
+    .description {
+      flex-direction: column;
+      .col-md-6 {
+        margin-bottom: 50px;
+        .des {
+          max-width: 450px;
+        }
+        .col-6 {
+          padding: 0;
+          margin-bottom: 50px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        &:last-child {
+          display: block;
+          //   padding: 0;
+        }
+      }
+    }
+  }
+}

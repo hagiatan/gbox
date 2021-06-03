@@ -1,0 +1,22 @@
+// CSS HOMEPAGE
+.studio {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  a {
+    color: #171717;
+    text-decoration: none;
+    display: block;
+  }
+  .studio__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 70px 20px;
+  }
+  @include xs {
+    .studio__list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

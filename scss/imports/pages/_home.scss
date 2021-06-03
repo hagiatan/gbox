@@ -1,0 +1,160 @@
+// CSS HOMEPAGE
+.homepage {
+  padding-bottom: 40px;
+  .textbox {
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px 0;
+    position: relative;
+    h3 {
+      font-size: 16px;
+      font-family: "pr";
+      line-height: 20px;
+      color: $black-cl;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h2 {
+      margin: 20px auto;
+      font-size: 20px;
+      font-family: "pb";
+      color: $black-cl;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      position: relative;
+      background: $yellow-cl;
+      width: max-content;
+      line-height: 15px;
+      span {
+        letter-spacing: 0;
+      }
+    }
+    p {
+      width: 740px;
+      margin: 0 auto;
+      font-size: 12px;
+      // white-space: nowrap;
+      b {
+        font-weight: bold;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 2px;
+      background: $black-cl;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .product {
+    .product__menu {
+      padding: 50px 0;
+      position: relative;
+      .product__menu__list {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        // display: block;
+        .product__menu__item {
+          padding: 0 20px;
+          .text {
+            @include text(16px, "pb", normal, $gray-cl, uppercase);
+            text-decoration: none;
+            transition: ($t);
+            display: block;
+            &.active {
+              color: $black-cl;
+              transition: ($t);
+            }
+            &:hover {
+              color: $black-cl;
+              transition: ($t);
+            }
+          }
+        }
+      }
+    }
+    .product__list {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+      gap: 20px;
+      &.active {
+        display: grid;
+      }
+    }
+    .allworks {
+      text-align: center;
+      margin: 40px auto;
+      cursor: pointer;
+      width: max-content;
+      // border-bottom: 2px solid #000;
+      a {
+        font-size: 12px;
+        font-family: "pb";
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black-cl;
+        display: block;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        @include keyframes(topdown) {
+          0% {
+            @include transform(translateY(0px));
+            opacity: 0;
+            @include transition(0.3s);
+          }
+          100% {
+            @include transform(translateY(15px));
+            opacity: 1;
+            @include transition(0.3s);
+          }
+        }
+        @include animation(topdown 1s ease forwards infinite);
+      }
+    }
+  }
+  @include sm {
+    .textbox {
+      .container {
+        p {
+          width: 600px;
+        }
+      }
+    }
+    .product {
+      .product__list {
+        &.active {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(auto, 1fr);
+          gap: 20px;
+        }
+      }
+    }
+  }
+  @include xs {
+    .textbox {
+      .container {
+        p {
+          display: none;
+        }
+      }
+    }
+    .product {
+      .product__list {
+        &.active {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

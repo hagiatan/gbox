@@ -1,0 +1,363 @@
+// CSS HOMEPAGE
+.studiorental {
+  .container {
+    display: flex;
+  }
+  .left {
+    width: calc(100% / 4);
+    height: 640px;
+    background-color: #525355;
+    padding-top: 70px;
+    padding-left: 20px;
+    .number {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $yellow-cl;
+      h2 {
+        font-size: 12px;
+        line-height: 25px;
+        font-family: "pb";
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 60px;
+        font-family: "pb";
+      }
+    }
+    .info {
+      .title {
+        font-size: 32px;
+        font-family: "pbe";
+        color: white;
+        margin: 30px 0;
+      }
+      h4 {
+        font-size: 12px;
+        font-family: "pr";
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: white;
+      }
+      p {
+        font-size: 14px;
+        font-family: "pr";
+        color: white;
+      }
+    }
+  }
+  .right {
+    padding-top: 80px;
+    padding-left: 50px;
+    width: calc(100% * 3 / 4);
+    .des1 {
+      .title {
+        font-size: 28px;
+        font-family: "pbe";
+      }
+      .des1__info {
+        width: 100%;
+        display: flex;
+        padding-top: 50px;
+        justify-content: space-between;
+        .des1__left {
+          width: calc(50% - 40px);
+          //   margin-right: 80px;
+        }
+        .des1__right {
+          width: calc(50% - 40px);
+
+          .address {
+            input {
+              border: 1px solid #000;
+              height: 90px;
+            }
+          }
+        }
+        input {
+          width: 100%;
+          margin: 20px 0;
+          border: none;
+          border-bottom: 1px solid #000;
+        }
+        label {
+          width: 100%;
+          font-size: 12px;
+          font-family: "pr";
+        }
+      }
+    }
+    .des2 {
+      margin-top: 40px;
+      .title {
+        font-size: 28px;
+        font-family: "pbe";
+      }
+      .studiodes2 {
+        margin-top: 40px;
+        h4 {
+          font-size: 12px;
+          font-family: "pr";
+        }
+        .choice {
+          display: flex;
+          gap: 20px;
+          margin-top: 20px;
+          .num {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            // text-align: center;
+            position: relative;
+            background: #000;
+            // align-items: center;
+            P {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
+              font-size: 24px;
+              font-family: "pb";
+            }
+            &.active {
+              background: $yellow-cl;
+              p {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+    .catering {
+      margin-top: 30px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      h4 {
+        font-size: 12px;
+        font-family: "pr";
+      }
+      .catering__left {
+        width: calc(50% - 40px);
+        // margin-right: 80px;
+      }
+      .catering__right {
+        width: calc(50% - 40px);
+        p {
+          font-size: 10px;
+          font-style: italic;
+          font-family: "pr";
+          width: calc(100% + 40px);
+        }
+      }
+      input {
+        width: 100%;
+        height: 90px;
+        border: 1px solid #000;
+        margin-top: 20px;
+      }
+    }
+    .booking {
+      margin-top: 30px;
+      h4 {
+        font-size: 12px;
+        font-family: "pr";
+      }
+      .date {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        &__left {
+          position: relative;
+          width: calc(50% - 40px);
+          input {
+            width: 100%;
+            height: 40px;
+          }
+        }
+        &__right {
+          width: calc(50% - 40px);
+          input {
+            width: 100%;
+            height: 40px;
+          }
+        }
+        .imgbook {
+          width: 10px;
+          height: 10px;
+          // height: 40px;
+          img {
+            height: 40px;
+          }
+        }
+      }
+    }
+    .project {
+      font-size: 12px;
+      font-family: "pr";
+      margin-top: 30px;
+      .qus {
+        margin-top: 20px;
+      }
+      input {
+        margin-top: 15px;
+        width: 100%;
+        height: 40px;
+      }
+    }
+    .sub {
+      padding-top: 60px;
+      padding-bottom: 70px;
+      display: flex;
+      .submit {
+        margin-right: 25px;
+      }
+      .testsub {
+        max-width: 220px;
+        font-size: 12px;
+        font-family: "pr";
+        span {
+          // text-transform:up ;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  @include xs {
+    .container {
+      flex-direction: column;
+      // display: flex;
+    }
+    .left {
+      display: flex;
+      width: 100%;
+      height: auto;
+      background: white;
+      padding: 0;
+      padding-top: 20px;
+      // color: #000;
+      .info {
+        color: black;
+        margin: 0 0 30px 30px;
+        .title {
+          font-size: 32px;
+          font-family: "pbe";
+          color: black;
+          // margin: 30px 0;
+          // margin: 0 0 30px 30px;
+          margin: 0 0 15px 0;
+        }
+        h4 {
+          font-size: 12px;
+          font-family: "pr";
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 10px;
+          color: black;
+        }
+        p {
+          font-size: 14px;
+          font-family: "pr";
+          color: black;
+        }
+      }
+    }
+    .right {
+      padding: 0;
+      .des1 {
+        .des1__info {
+          width: 100%;
+          flex-direction: column;
+          input {
+            width: 350%;
+          }
+        }
+      }
+      .catering {
+        flex-direction: column;
+
+        h4 {
+          font-size: 12px;
+          font-family: "pr";
+        }
+        .catering__left {
+          width: 100%;
+          // margin-right: 80px;
+        }
+        .catering__right {
+          width: 100%;
+          p {
+            font-size: 10px;
+            font-style: italic;
+            font-family: "pr";
+            width: calc(100% + 40px);
+          }
+        }
+        input {
+          width: 140%;
+          height: 90px;
+          border: 1px solid #000;
+          margin-top: 20px;
+        }
+      }
+      .booking {
+        margin-top: 30px;
+        h4 {
+          font-size: 12px;
+          font-family: "pr";
+        }
+        .date {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: space-between;
+          &__left {
+            margin-bottom: 20px;
+            position: relative;
+            width: calc(50% - 40px);
+            input {
+              width: 350%;
+              height: 40px;
+            }
+          }
+          &__right {
+            width: calc(50% - 40px);
+            input {
+              width: 350%;
+              height: 40px;
+            }
+          }
+          .imgbook {
+            width: 10px;
+            height: 10px;
+            // height: 40px;
+            img {
+              height: 50px;
+            }
+          }
+        }
+      }
+      .project {
+        font-size: 12px;
+        font-family: "pr";
+        margin-top: 30px;
+        .qus {
+          margin-top: 20px;
+        }
+        input {
+          margin-top: 15px;
+          width: 140%;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

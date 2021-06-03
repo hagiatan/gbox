@@ -1,0 +1,28 @@
+// CSS HOMEPAGE
+.aboutus {
+  background-image: url("/img/slideabout.jpg");
+  // background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  .about__info {
+    h2 {
+      font-family: "pb";
+      color: $yellow-cl;
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: 25px;
+      line-height: 50px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      line-height: 40px;
+      max-width: 850px;
+    }
+  }
+}

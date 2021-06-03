@@ -1,0 +1,231 @@
+// css components
+.product__item {
+  .product__text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    .title {
+      font-size: 12px;
+      font-family: "pb";
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: $yellow-cl;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -12px;
+      }
+    }
+    .text {
+      font-size: 12px;
+      font-family: "pr";
+    }
+  }
+  .product__image {
+    height: 0px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.studio__item {
+  &:hover {
+    background: #525355;
+  }
+  .studio__image {
+    height: 0px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: grayscale(100%) sepia(14%) brightness(74%);
+      -webkit-filter: grayscale(100%) sepia(14%) brightness(74%);
+      -moz-filter: grayscale(100%) sepia(14%) brightness(74%);
+      transition: 0.3s;
+      &:hover {
+        filter: grayscale(0%) sepia(0%) brightness(100%);
+        -webkit-filter: grayscale(0%) sepia(0%) brightness(100%);
+        -moz-filter: grayscale(0%) sepia(0%) brightness(100%);
+        transition: 0.3s;
+      }
+    }
+  }
+  .studio__info {
+    display: flex;
+    height: 120px;
+
+    .number {
+      width: 120px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $yellow-cl;
+      h2 {
+        font-size: 12px;
+        line-height: 25px;
+        font-family: "pb";
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 60px;
+        font-family: "pb";
+      }
+    }
+    .detail {
+      display: flex;
+      padding: 30px 40px 0 80px;
+      justify-content: space-between;
+      flex-grow: 1;
+      .dimentions {
+        .title {
+          font-family: "pr";
+          font-size: 12px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        .text {
+          font-family: "pr";
+          font-size: 12px;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        .title {
+          font-family: "pr";
+          font-size: 12px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        .text {
+          font-family: "pr";
+          font-size: 12px;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    @include sm {
+      height: 90px;
+      .number {
+        h2 {
+          font-size: 10px;
+          line-height: 20px;
+        }
+        p {
+          font-size: 40px;
+        }
+      }
+      .detail {
+        padding: 10px 20px 0 30px;
+        .dimentions {
+          .title {
+            font-family: "pr";
+            font-size: 8px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+          .text {
+            font-family: "pr";
+            font-size: 8px;
+          }
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          align-items: center;
+          .title {
+            font-family: "pr";
+            font-size: 8px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+          .text {
+            font-family: "pr";
+            font-size: 8px;
+          }
+          img {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+    @include xs {
+      height: 120px;
+      .number {
+        h2 {
+          font-size: 12px;
+          line-height: 25px;
+        }
+        p {
+          font-size: 60px;
+        }
+      }
+      .detail {
+        padding: 30px 40px 0 80px;
+        .dimentions {
+          .title {
+            font-family: "pr";
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-family: "pr";
+            font-size: 12px;
+          }
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          align-items: center;
+          .title {
+            font-family: "pr";
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-family: "pr";
+            font-size: 12px;
+          }
+          img {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

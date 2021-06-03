@@ -1,0 +1,48 @@
+.contacts {
+  background-image: url("/img/bgcontact.jpg");
+  // background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 95px;
+  padding-bottom: 20px;
+  .img__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .info__contact {
+    display: flex;
+    margin-bottom: 70px;
+    p {
+      font-family: "pr";
+      font-size: 12px;
+      color: white;
+      text-transform: uppercase;
+      line-height: 40px;
+    }
+    .add {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+    .emails {
+      //  text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 15px;
+      height: 15px;
+      * {
+        fill: white;
+      }
+    }
+  }
+}

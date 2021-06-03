@@ -1,0 +1,280 @@
+// CSS HOMEPAGE
+.studiodetails {
+  .on {
+    position: relative;
+    .slider__top {
+      font-size: 14px;
+      font-family: "pr";
+      padding: 30px 0;
+      .back {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img {
+          width: 10px;
+          transform: rotate(90deg);
+          margin-left: 30px;
+        }
+      }
+    }
+    .slider {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+      width: 100%;
+      &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        &-wrap {
+          width: 100%;
+          height: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          @include mid(false);
+        }
+      }
+    }
+    .slider__bot {
+      margin: 0 0 60px 20px;
+      display: flex;
+      height: 120px;
+      .number {
+        width: 120px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $yellow-cl;
+        h2 {
+          font-size: 12px;
+          line-height: 25px;
+          font-family: "pb";
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 60px;
+          font-family: "pb";
+        }
+      }
+      .right {
+        display: flex;
+        padding: 30px 0 0 80px;
+        flex-grow: 1;
+        justify-content: space-between;
+        img {
+          width: 10px;
+          height: 10px;
+          align-self: center;
+        }
+        .info {
+          .title {
+            font-size: 14px;
+            font-family: "pr";
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            //   line-height: 30px;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-size: 12px;
+            font-family: "pr";
+          }
+        }
+        .down {
+          display: flex;
+          height: max-content;
+          .title {
+            font-size: 12px;
+            font-family: "pr";
+            padding-right: 20px;
+          }
+        }
+        .full {
+          display: flex;
+          height: max-content;
+          .title {
+            font-size: 12px;
+            font-family: "pr";
+            padding-right: 20px;
+          }
+        }
+        .control {
+          height: max-content;
+          cursor: pointer;
+          .btn {
+            padding: 0 20px;
+            font-size: 12px;
+            font-family: "pr";
+            text-decoration: none;
+            color: #000;
+            &.--pre {
+              position: relative;
+              span {
+                align-self: center;
+                font-size: 12px;
+                font-family: "pr";
+              }
+              img {
+                margin-right: 20px;
+                transform: rotate(90deg);
+              }
+              &::after {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 20px;
+                background-color: #000;
+                right: 0px;
+              }
+            }
+            &.--next {
+              span {
+                align-self: center;
+                font-size: 12px;
+                font-family: "pr";
+              }
+              img {
+                margin-left: 20px;
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      bottom: -60px;
+    }
+  }
+  .details {
+    padding: 30px 20px 70px 20px;
+    h2 {
+      font-size: 32px;
+      font-family: "pbe";
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 12px;
+      font-family: "pr";
+    }
+    span {
+      font-weight: bold;
+    }
+    .col-md-6 {
+      margin-bottom: 50px;
+      --heighMar: 60px;
+      .table {
+        font-size: 12px;
+        font-family: "pr";
+        width: 100%;
+        height: 200px;
+        margin-top: calc(var(--heighMar) / 2);
+        tr {
+          border: 1px solid black;
+        }
+        td {
+          vertical-align: middle;
+          &:first-child {
+            padding-left: 60px;
+          }
+          &:last-child {
+            text-align: right;
+            padding-right: 20px;
+          }
+        }
+      }
+      img {
+        margin-top: var(--heighMar);
+      }
+    }
+    .col-md-12 {
+      p {
+        margin-bottom: 30px;
+      }
+      .col-6:first-child {
+        p:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+    // .col-md-6 {
+    //   &:last-child {
+    //     h2 {
+    //       margin-bottom: 90px;
+    //
+    //   }
+    // }
+  }
+  @include sm {
+    .on {
+      .slider__bot {
+        .right {
+          padding: 10px 0 0 20px;
+          img {
+            width: 8px;
+            height: 8px;
+            align-self: center;
+          }
+          .down {
+            .title {
+              padding-right: 5px;
+            }
+          }
+          .full {
+            .title {
+              padding-right: 5px;
+            }
+          }
+          .control {
+            .btn {
+              padding: 0 5px;
+              &.--pre {
+                position: relative;
+                img {
+                  margin-right: 5px;
+                  transform: rotate(90deg);
+                }
+              }
+              &.--next {
+                img {
+                  margin-left: 5px;
+                  transform: rotate(-90deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include xs {
+    .on {
+      .slider__bot {
+        height: 120px;
+        .right {
+          padding: 30px 0 0 80px;
+          .down,
+          .full,
+          .control {
+            display: none;
+          }
+        }
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
